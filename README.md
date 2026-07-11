@@ -37,6 +37,15 @@ make
 ./MAWR -m <map_file> -s <scenario_file> -a NATCBS [options]
 ```
 
+## NATCBS Guides
+
+The NATCBS backend is selected at CMake configure time. Standalone mode guides are available here:
+
+- [NATCBS overview](guides/NATCBS/README.md)
+- [NATCBS with OR-Tools](guides/NATCBS/ortools/README.mdmd)
+- [NATCBS with CPLEX cold start](guides/NATCBS/cplex-cold/README.md)
+- [NATCBS with CPLEX warm start](guides/NATCBS/cplex-warm/README.md)
+
 ### Required Arguments
 | Flag | Description |
 |------|-------------|
