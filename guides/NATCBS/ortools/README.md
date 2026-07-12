@@ -88,7 +88,7 @@ Useful optional flags:
 
 - `-t` sets the time limit in seconds.
 - `-o` selects the CSV output file.
-- `-v 2` enables debug logging, which is useful when comparing solver behavior.
+- `--v 2` enables debug logging, which is useful when comparing solver behavior.
 
 ## Verification
 

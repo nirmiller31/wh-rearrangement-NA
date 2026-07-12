@@ -50,7 +50,7 @@ Enable warm start and model reuse before launching the solver:
 ```bash
 export MAWR_CPLEX_WARM_START=1
 export MAWR_CPLEX_REUSE_MODEL=1
-./build-cplex-warm/MAWR -m <map_file> -s <scenario_file> -a NATCBS -v 2
+./build-cplex-warm/MAWR -m <map_file> -s <scenario_file> -a NATCBS --v 2
 ```
 
 These are the defaults in the code, so you only need to export them if you want to make the mode explicit or override a shell that previously disabled them.
@@ -61,10 +61,11 @@ The planner keeps a persistent CPLEX network model and stores the simplex basis 
 
 ## Verification
 
-With verbose logging, a successful warm-start solve should print messages similar to:
+With verbose logging, a successful warm-start solve should include:
 
 ```text
+[CPLEX] Applied differential update (bounds/objective).
 [CPLEX] Warm start basis loaded.
 ```
 
-If the topology changes or the basis becomes invalid, the code may report a fallback to cold start instead.
+To view the full log, redirect the solver output to a file.

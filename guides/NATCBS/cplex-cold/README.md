@@ -49,16 +49,20 @@ Set CPLEX to cold-start mode before launching the solver:
 
 ```bash
 export MAWR_CPLEX_WARM_START=0
-export MAWR_CPLEX_REUSE_MODEL=1
-./build-cplex-cold/MAWR -m <map_file> -s <scenario_file> -a NATCBS -v 2
+export MAWR_CPLEX_REUSE_MODEL=0
+./build-cplex-cold/MAWR -m <map_file> -s <scenario_file> -a NATCBS --v 2
 ```
-
-`MAWR_CPLEX_REUSE_MODEL` can stay enabled for incremental model updates, but the solver will not reuse the previous simplex basis while `MAWR_CPLEX_WARM_START=0`.
 
 ## Verification
 
-With verbosity enabled, a cold-start run should log that no reusable basis is available or that the solver is running without warm start. If the backend is wired correctly, the build should link against the CPLEX headers and static library during configuration and compilation.
+With verbose logging, a cold-start run should include:
 
+```text  
+[CPLEX] Rebuilt network model (topology changed).
+```
+
+To view the full logs we suggest to  redirect the solver output to a file.
+If warm start is disabled, you should not see any basis-loaded message.
 ## Common Issues
 
 - CMake cannot find `ilcplex/cplex.h`: check the unpack path or update the include directory in `CMakeLists.txt`.
