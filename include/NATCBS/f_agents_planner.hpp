@@ -84,9 +84,9 @@ private:
     vector<std::pair<Location, Location>> map_edges;
     bool reached_all = false;
 
-    // Optional topology mode for warm-start experiments.
-    // When enabled, the time-expanded graph uses all passable map locations/edges
-    // instead of pruning by dynamic reachability.
+    // MAWR_FULL_TOPOLOGY_MODE disables dynamic reachability pruning.
+    // When enabled, the time-expanded graph keeps all passable map locations/edges
+    // and is useful for warm-start and backend comparison experiments.
     bool full_topology_mode_enabled = false;
     vector<Location> full_topology_locations;
     vector<std::pair<Location, Location>> full_topology_edges;
