@@ -4,7 +4,7 @@ This repository contains the source code for the paper:
 
 **"From Agent Centric to Obstacle Centric Planning: A Makespan-Optimal Algorithm for the Multi-Agent Warehouse Rearrangement Problem"**
 
-Yaakov Sherma, [Eyal Weiss](https://sites.google.com/view/eyal-weiss/home), and [Oren Salzman](https://crl.cs.technion.ac.il/)
+Yaakov Sherma, [Eyal Weiss](https://eyal-weiss.github.io/), and [Oren Salzman](https://orensalzman.com/)
 
 Published in the *Proceedings of the 18th International Symposium on Combinatorial Search* (SoCS 2025), pp. 136–144, Glasgow, UK.
 
@@ -42,7 +42,7 @@ make
 The NATCBS backend is selected at CMake configure time. Standalone mode guides are available here:
 
 - [NATCBS overview](guides/NATCBS/README.md)
-- [NATCBS with OR-Tools](guides/NATCBS/ortools/README.mdmd)
+- [NATCBS with OR-Tools](guides/NATCBS/ortools/README.md)
 - [NATCBS with CPLEX cold start](guides/NATCBS/cplex-cold/README.md)
 - [NATCBS with CPLEX warm start](guides/NATCBS/cplex-warm/README.md)
 

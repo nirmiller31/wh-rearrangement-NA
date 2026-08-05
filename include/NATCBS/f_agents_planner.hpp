@@ -103,7 +103,7 @@ private:
 #ifdef FLOW_BACKEND_CPLEX
     // ===== CPLEX Warm-Start Persistent State =====
     // These members persist across NATCBS iterations to enable warm-starting
-    // of the network simplex solver with previously computed basis information.
+    // of the network Simplex solver with previously computed basis information.
     
     // CPLEX environment pointer: reused across all flow solves
     // Allocated on first use by ensure_cplex_model(), freed in destructor
@@ -113,7 +113,7 @@ private:
     // Allocated on first use by ensure_cplex_model(), freed in destructor
     CPXNETptr cplex_net = nullptr;
     
-    // Runtime toggle: controls whether to reuse previously computed simplex basis
+    // Runtime toggle: controls whether to reuse previously computed Simplex basis
     // Read from environment variable MAWR_CPLEX_WARM_START (default: 1)
     // When enabled: CPXNETcopybase() injects saved basis before solving
     // When disabled: solver starts from scratch (cold-start)
@@ -125,7 +125,7 @@ private:
     // When disabled: model is rebuilt via CPXNETcopynet() on every iteration
     bool cplex_reuse_model_enabled = true;
     
-    // Saved network simplex basis from previous iteration
+    // Saved network Simplex basis from previous iteration
     // saved_arc_basis[a] = CPX status code for arc a (basic, lower bound, upper bound)
     // saved_node_basis[n] = CPX status code for node n (basic, free, or at bound)
     vector<int> saved_arc_basis;

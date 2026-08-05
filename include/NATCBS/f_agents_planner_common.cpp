@@ -108,7 +108,7 @@ FAgentsPlanner::FAgentsPlanner(int map_rows, int map_cols, const vector<vector<C
 
 #ifdef FLOW_BACKEND_CPLEX
     // ===== CPLEX Warm-Start Configuration (from environment variables) =====
-    // MAWR_CPLEX_WARM_START: controls whether to reuse the simplex basis from previous iteration
+    // MAWR_CPLEX_WARM_START: controls whether to reuse the Simplex basis from previous iteration
     // - When set to 1 (default): CPXNETcopybase() loads saved basis before each solve
     // - When set to 0: solver ignores saved basis and performs cold-start
     // - Used in solve_flow() to determine if basis warm-start can be applied

@@ -2,7 +2,7 @@
 
 ## Overview
 
-This mode uses the CPLEX backend with persistent model reuse and simplex basis warm-starting enabled. It is the configuration that is closest to the optimized CPLEX path in the code.
+This mode uses the CPLEX backend with persistent model reuse and Simplex basis warm-starting enabled. It is the configuration that is closest to the optimized CPLEX path in the code.
 
 ## Prerequisites
 
@@ -57,7 +57,7 @@ These are the defaults in the code, so you only need to export them if you want 
 
 ## What Warm Start Does
 
-The planner keeps a persistent CPLEX network model and stores the simplex basis from the previous iteration. On the next solve, it tries to inject that basis before running `CPXNETprimopt` again. If the basis becomes incompatible, the code falls back to a cold start automatically.
+The planner keeps a persistent CPLEX network model and stores the Simplex basis from the previous iteration. On the next solve, it tries to inject that basis before running `CPXNETprimopt` again. If the basis becomes incompatible, the code falls back to a cold start automatically.
 
 ## Verification
 

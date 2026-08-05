@@ -2,7 +2,7 @@
 
 ## Overview
 
-This mode uses IBM CPLEX for the NATCBS flow planner with warm-start disabled. It still uses the CPLEX backend, but each solve starts from scratch instead of reusing a previous simplex basis.
+This mode uses IBM CPLEX for the NATCBS flow planner with warm-start disabled. It still uses the CPLEX backend, but each solve starts from scratch instead of reusing a previous Simplex basis.
 
 ## Prerequisites
 
