@@ -1,3 +1,6 @@
+// NATCBS flow-planner implementation for the CPLEX backend.
+// This file owns the persistent CPLEX network model and warm-start solve path.
+
 #include "f_agents_planner.hpp"
 
 #ifdef FLOW_BACKEND_CPLEX

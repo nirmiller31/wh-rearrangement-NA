@@ -1,3 +1,7 @@
+// Shared NATCBS flow-planner implementation.
+// This file owns the common graph construction, topology growth, and runtime
+// environment handling used by both the OR-Tools and CPLEX backends.
+
 #include "f_agents_planner.hpp"
 
 #include <cstdlib>

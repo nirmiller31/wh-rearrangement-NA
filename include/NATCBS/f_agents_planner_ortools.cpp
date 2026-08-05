@@ -1,3 +1,6 @@
+// NATCBS flow-planner implementation for the OR-Tools backend.
+// This file owns the OR-Tools-specific max-flow and min-cost flow solve path.
+
 #include "f_agents_planner.hpp"
 #include "ortools/graph/max_flow.h"
 
